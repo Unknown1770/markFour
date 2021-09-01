@@ -1,0 +1,282 @@
+/* ======================== Google Fonts ======================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+/* =========================== Colors ========================== */
+
+:root {
+    --primary-color: hsl(64, 73%, 58%);
+}
+
+* {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+/* ====================== Navigation ===================== */
+
+.navbar {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 8vh;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #d2d0db;
+}
+
+.navbrand {
+    color: #F9FAFB;
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+.nav__toggler {
+    color: #FFFFFF;
+    padding: 0.5rem;
+    opacity: .7;
+}
+
+.nav__list {
+    background-color: #c3e235;
+    list-style: none;
+    width: 100%;
+    transform: translateY(5.5px);
+}
+
+.nav__item {
+    padding: 0.5rem 0;
+}
+
+.nav__item>a {
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav__item>a:hover {
+    font-size: 120%;
+    color: #FFFFFF;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+
+/* ================== Collapsible Component =================== */
+
+.collapsible__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.collapsible--expanded .collapsible__content {
+    max-height: 100vh;
+    transition: max-height 0.7s;
+}
+
+.navbar.collapsible--expanded .nav__toggler {
+    opacity: 0;
+}
+
+
+/* ================= Responsive ========================== */
+
+
+/* Tablets and wider screens */
+
+@media screen and (min-width: 768px) {
+    .nav__toggler {
+        display: none;
+    }
+    .nav__list {
+        background-color: var(--primary-color);
+        width: auto;
+        display: flex;
+        max-height: 100%;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    .nav__item {
+        padding-right: 3rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ========================== Header ===================== */
+
+header {
+    height: 100vh;
+}
+
+img {
+    width: 80vw;
+    padding: 2rem;
+}
+
+.hero__content {
+    text-align: left;
+    margin: 1rem;
+}
+
+.block__heading {
+    color: #1F2937;
+    font-size: 3rem;
+}
+
+.hero__tagline {
+    font-size: 1.5rem;
+    color: #6B7280;
+}
+
+strong {
+    color: var(--primary-color);
+}
+
+.grid {
+    display: grid;
+}
+
+header .container {
+    transform: translateY(5rem);
+}
+
+@media screen and (min-width: 768px) {
+    .grid--1x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    img {
+        width: 50vw;
+        padding: 2rem;
+    }
+    .hero__content {
+        transform: translateY(10rem);
+        transition: transform .4s;
+    }
+}
+
+
+/* ======================== Main ======================== */
+
+main {
+    text-align: center;
+}
+
+.technologies {
+    background-color: #E5E7EB;
+}
+
+h2 {
+    font-size: 3rem;
+    padding: 1.5rem;
+}
+
+main img {
+    width: 15%;
+}
+
+.projects {
+    height: 100vh;
+}
+
+.projects>p,
+.blogs>p {
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.slides__container img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 40vh;
+}
+
+@media screen and (min-width: 768px) {
+    .slides__container img {
+        width: 50%;
+    }
+}
+
+.btn-display-left,
+.btn-display-right {
+    display: inline-block;
+    padding: .3rem 1rem;
+    text-decoration: none;
+    color: #555;
+    border: 3px solid #10B981;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.btn-display-left:hover,
+.btn-display-right:hover {
+    background-color: var(--primary-color);
+    color: #F3F4F6;
+}
+
+.btn-projects,
+.btn-blogs {
+    display: inline-block;
+    padding: .5rem 8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #F3F4F6;
+    background-image: -webkit-linear-gradient(45deg, #809605 0%, #e5e91d 100%);
+    background-image: linear-gradient(45deg, #809605 0%, #e5e91d 100%);
+    transition: .4s;
+}
+
+.btn-projects:hover,
+.btn-blogs:hover {
+    background-image: -webkit-linear-gradient(45deg, #059669 0%, #1D4ED8 100%);
+    background-image: linear-gradient(45deg, #059669 0%, #1D4ED8 100%);
+}
+
+.blogs {
+    height: 70vh;
+    background-color: #E5E7EB;
+}
+
+footer {
+    height: 30vh;
+    background-color: var(--primary-color);
+}
+
+footer p {
+    color: #374151;
+    font-size: 1rem;
+    text-align: center;
+    transform: translateY(3rem);
+}
+
+.social {
+    display: block;
+    text-align: center;
+    transform: translateY(1.5rem) translateX(-1.5rem);
+}
+
+.icon {
+    display: inline;
+    list-style: none;
+}
+
+.social img {
+    width: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .social img {
+        width: 1.8rem;
+    }
+}

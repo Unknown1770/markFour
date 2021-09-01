@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Unknown1770| Web Developer</title>
+</head>
+
+<body>
+
+    <!-- ----------------------------------------- Navigation ----------------------------------------- -->
+
+    <nav class="navbar collapsible collapsible--expanded" id="navbar">
+        <a class="navbrand" href="/">Unknown1770</a>
+        <i class="fa fa-bars nav__toggler"></i>
+
+        <ul class="list nav__list collapsible__content">
+            <li class="nav__item">
+                <a href="">Home</a>
+            </li>
+            <li class="nav__item">
+                <a href="projects.html">Projects</a>
+            </li>
+            <li class="nav__item">
+                <a href="#blogs">Blogs</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- ---------------------------------------- Header ------------------------------------- -->
+    <header class="block block--skewed-left">
+        <div class="container grid grid--1x2">
+            <div class="hero__content">
+                <h1 class="block__heading">HI THERE!!</h1>
+                <p class="hero__tagline">I am Vijayant Prateek, and I Am A <strong>Web Developer</strong> .</p>
+            </div>
+            <img src="/img/pic1.png" alt="header Image">
+        </div>
+    </header>
+
+    <main>
+        <section class="technologies container-center" id="technologies">
+            <h2>Technologies I have worked on So far...........</h2>
+            <img src="/img/html.png" alt="">
+            <img src="/img/css.png" alt="">
+            <img src="/img/js.png" alt="">
+            <img src="/img/node.png" alt="">
+            <img src="/img/react.png" alt="">
+        </section>
+
+        <section class="projects container-center" id="projects">
+            <h2>My Projects</h2>
+
+            <div class="slides__container">
+                <img class="mySlides" src="/img/home.png" alt="Fruit Ninja Game">
+                <img class="mySlides" src="/img/play.png" alt="Flappy Bird Game">
+                <img class="mySlides" src="/img/filter.png" alt="Image Filter App">
+
+                <button class="btn-display-left" onclick="plusDivs(-1)">&#10094; Prev</button>
+                <button class="btn-display-right" onclick="plusDivs(+1)">Next &#10095;</button>
+            </div>
+
+            <a class="btn-projects" href="projects.html">See All Projects</a>
+
+        </section>
+
+        <section class="blogs" id="blogs">
+            <h2>Blogs</h2>
+            <p>Currently I am still working on writing blogs on every interesting topics. </p>
+            <a class="btn-blogs" href="">See All Blogs</a>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+
+            <ul class="social">
+                <li class="icon">
+                    <a href="https://github.com/Unknown1770" target="blank"><img src="/img/github.png" alt=""></a>
+                </li>
+                <li class="icon">
+                    <a href="https://www.linkedin.com/in/vijayant-prateek-6a134b128/" target="blank"><img src="/img/linkedin.png" alt=""></a>
+                </li>
+                <li class="icon">
+                    <a href="https://www.instagram.com/_.vijay_1770/" target="blank"><img src="/img/ig.jpg" alt=""></a>
+                </li>
+            </ul>
+
+            <p>Designed by Unknown1770</p>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
